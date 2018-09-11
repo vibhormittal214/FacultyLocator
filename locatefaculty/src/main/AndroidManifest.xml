@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.locatefaculty">
+     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:allowBackup="true"
+        android:icon="@drawable/studentlogo"
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl">
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".chat"
+            android:theme="@style/AppTheme.NoActionBar"  />
+        <activity android:name=".sell"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".purchase"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <service android:name=".LocationService"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDY6dG4riZeoD4rwNnQcwJ-hx3NGa1Iv9I"/>
+    </application>
+</manifest>
